@@ -144,7 +144,6 @@ a, a:hover {
 
 .navbar {
     margin-bottom: 0;
-
 }
 
 .main-article {
@@ -223,6 +222,11 @@ a, a:hover {
     border-radius: 0;
     padding: 0;
     border: none;
+}
+
+img.img-responsive.wp-post-image[src$="svg"] {
+    width: 50%;
+    margin: auto;
 }
 
 h2 {
