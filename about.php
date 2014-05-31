@@ -17,7 +17,7 @@ get_header(); ?>
                     <?php $authors = get_users('orderby=post_count&order=DESC');
                     foreach($authors as $user)
                     {
-                        if (!in_array( 'administrator', $user->roles )){
+                        if (!in_array( 'editor', $user->roles )){
                             continue;
                         }
 
