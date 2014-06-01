@@ -2,7 +2,7 @@ body {
     font-spacing: 0.01rem;
     font-size: 22px;
     line-height: 1.5;
-    font-family: 'Freight Text Pro',Georgia,Times,Times New Roman,serif;
+    font-family: 'Freight Text Pro', Georgia, Times, Times New Roman, serif;
     font-weight: 400;
     text-align: justify;
     hyphens: auto;
@@ -88,10 +88,9 @@ body {
     font-style: normal;
 }
 
-h1,h2,h3,h4,h5 , h1+p, .navbar, .autor-name {
+h1, h2, h3, h4, h5, h1 + p, .navbar, .autor-name {
     font-family: 'Proxima Nova', sans-serif;
 }
-
 
 p {
     font-size: 14px;
@@ -178,7 +177,7 @@ a, a:hover {
     font-weight: bold;
 }
 
-.main-article.white h1, .main-article.white  p  {
+.main-article.white h1, .main-article.white p {
     color: #fff;
 }
 
@@ -197,7 +196,7 @@ a, a:hover {
     color: #fff;
 }
 
-.navbar>.container .navbar-brand {
+.navbar > .container .navbar-brand {
     font-weight: 100;
     font-size: 26px;
     padding: 0 15px;
@@ -322,6 +321,7 @@ h2 {
     border-bottom: 2px solid #ffffff;
     padding-bottom: 13px;
 }
+
 #logo {
     height: 100%;
     width: auto;
@@ -340,8 +340,13 @@ h2 {
     overflow: hidden;
 }
 
-.flex-video.widescreen { padding-bottom: 57.25%; }
-.flex-video.vimeo { padding-top: 0; }
+.flex-video.widescreen {
+    padding-bottom: 57.25%;
+}
+
+.flex-video.vimeo {
+    padding-top: 0;
+}
 
 .flex-video iframe,
 .flex-video object,
@@ -352,8 +357,11 @@ h2 {
     width: 100%;
     height: 100%;
 }
+
 @media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
-    .flex-video { padding-top: 0; }
+    .flex-video {
+        padding-top: 0;
+    }
 }
 
 /* Small Devices, Tablets */
