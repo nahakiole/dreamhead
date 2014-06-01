@@ -1,4 +1,5 @@
 <?php
 
-shell_exec( 'git reset --hard HEAD && git pull && git submodule update --init --recursive' );
+shell_exec( 'chmod +x push' );
+shell_exec( './push' );
 echo 'It works!';
