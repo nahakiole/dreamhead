@@ -24,7 +24,6 @@
 
 <script type="text/javascript" src="//use.typekit.net/ijo2uri.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
 <?php wp_footer() ?>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

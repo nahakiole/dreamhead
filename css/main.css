@@ -1,95 +1,12 @@
 body {
-    font-spacing: 0.01rem;
-    font-size: 22px;
-    line-height: 1.5;
-    font-family: 'Freight Text Pro', Georgia, Times, Times New Roman, serif;
-    font-weight: 400;
-    text-align: justify;
-    hyphens: auto;
+
 }
 
-@font-face {
-    font-family: 'Proxima Nova';
-    src: url('http://cdn.eggworks.ch/fonts/pn-l.eot');
-    src: url('http://cdn.eggworks.ch/fonts/pn-l.eot?#iefix') format('embedded-opentype'), url('http://cdn.eggworks.ch/fonts/pn-l.woff') format('woff'), url('http://cdn.eggworks.ch/fonts/pn-l.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Proxima Nova';
-    src: url('http://cdn.eggworks.ch/fonts/pn-li.eot');
-    src: url('http://cdn.eggworks.ch/fonts/pn-li.eot?#iefix') format('embedded-opentype'), url('http://cdn.eggworks.ch/fonts/pn-li.woff') format('woff'), url('http://cdn.eggworks.ch/fonts/pn-li.ttf') format('truetype');
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Proxima Nova';
-    src: url('http://cdn.eggworks.ch/fonts/pn-r.eot');
-    src: url('http://cdn.eggworks.ch/fonts/pn-r.eot?#iefix') format('embedded-opentype'), url('http://cdn.eggworks.ch/fonts/pn-r.woff') format('woff'), url('http://cdn.eggworks.ch/fonts/pn-r.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Proxima Nova';
-    src: url('http://cdn.eggworks.ch/fonts/pn-ri.eot');
-    src: url('http://cdn.eggworks.ch/fonts/pn-ri.eot?#iefix') format('embedded-opentype'), url('http://cdn.eggworks.ch/fonts/pn-ri.woff') format('woff'), url('http://cdn.eggworks.ch/fonts/pn-ri.ttf') format('truetype');
-    font-weight: 500;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Proxima Nova';
-    src: url('http://cdn.eggworks.ch/fonts/pn-sb.eot');
-    src: url('http://cdn.eggworks.ch/fonts/pn-sb.eot?#iefix') format('embedded-opentype'), url('http://cdn.eggworks.ch/fonts/pn-sb.woff') format('woff'), url('http://cdn.eggworks.ch/fonts/pn-sb.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Proxima Nova';
-    src: url('http://cdn.eggworks.ch/fonts/pn-sbi.eot');
-    src: url('http://cdn.eggworks.ch/fonts/pn-sbi.eot?#iefix') format('embedded-opentype'), url('http://cdn.eggworks.ch/fonts/pn-sbi.woff') format('woff'), url('http://cdn.eggworks.ch/fonts/pn-sbi.ttf') format('truetype');
-    font-weight: 600;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Proxima Nova';
-    src: url('http://cdn.eggworks.ch/fonts/pn-b.eot');
-    src: url('http://cdn.eggworks.ch/fonts/pn-b.eot?#iefix') format('embedded-opentype'), url('http://cdn.eggworks.ch/fonts/pn-b.woff') format('woff'), url('http://cdn.eggworks.ch/fonts/pn-b.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Proxima Nova';
-    src: url('http://cdn.eggworks.ch/fonts/pn-bi.eot');
-    src: url('http://cdn.eggworks.ch/fonts/pn-bi.eot?#iefix') format('embedded-opentype'), url('http://cdn.eggworks.ch/fonts/pn-bi.woff') format('woff'), url('http://cdn.eggworks.ch/fonts/pn-bi.ttf') format('truetype');
-    font-weight: 700;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Proxima Nova';
-    src: url('http://cdn.eggworks.ch/fonts/pn-be.eot');
-    src: url('http://cdn.eggworks.ch/fonts/pn-be.eot?#iefix') format('embedded-opentype'), url('http://cdn.eggworks.ch/fonts/pn-be.woff') format('woff'), url('http://cdn.eggworks.ch/fonts/pn-be.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Proxima Nova';
-    src: url('http://cdn.eggworks.ch/fonts/pn-bl.eot');
-    src: url('http://cdn.eggworks.ch/fonts/pn-bl.eot?#iefix') format('embedded-opentype'), url('http://cdn.eggworks.ch/fonts/pn-bl.woff') format('woff'), url('http://cdn.eggworks.ch/fonts/pn-bl.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-}
 
 h1, h2, h3, h4, h5, h1 + p, .navbar, .autor-name {
-    font-family: 'Proxima Nova', sans-serif;
+    font-family: "proxima-nova",sans-serif;
+    font-style: normal;
+    font-weight: 600;
 }
 
 p {
@@ -329,6 +246,21 @@ h2 {
 
 .white #logo #logo-font {
     fill: white;
+}
+
+
+.article-preview, .single-page, .single-article {
+    font-spacing: 0.01rem;
+    font-size: 22px;
+    line-height: 1.5;
+    font-family: "freight-text-pro", Georgia, Times, Times New Roman, serif;
+    font-weight: 400;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.article-preview a {
+    font-size: inherit;
 }
 
 .flex-video {
