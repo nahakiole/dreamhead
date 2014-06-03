@@ -7,10 +7,12 @@
     $now = new DateTime(get_the_date('c'));
     $isLegacyPost = $date->diff($now)->invert;
     if (!$isLegacyPost) {
+        $image = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+        $svgClass = substr($image,-3,3) == 'svg' ? 'svg' : '';
         ?>
-        <div class="jumbotron main-article"
+        <div class="jumbotron main-article <?php echo $svgClass ?>"
              style="background-image: url('<?php
-             echo wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+             echo $image;
              ?>')">
             <div class="article-pretext">
                 <div class="container">

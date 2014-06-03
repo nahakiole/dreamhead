@@ -18,13 +18,17 @@
         the_post();
         $count++;
         if ($count == 1 && $paged == 1) {
+
+            $image = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+            $svgClass = substr($image,-3,3) == 'svg' ? 'svg' : '';
             ?>
+
             <!-- Main jumbotron for a primary marketing message or call to action -->
             <a href="<?php the_permalink() ?>">
-                <div class="jumbotron main-article"
-                     style="background-image: url('<?php echo wp_get_attachment_url(
-                         get_post_thumbnail_id($post->ID)
-                     ) ?>')">
+                <div class="jumbotron main-article <?php echo $svgClass ?>"
+                     style="background-image: url('<?php
+                     echo $image;
+                     ?>')">
 
                     <div class="article-pretext">
                         <div class="container">
