@@ -29,7 +29,7 @@
             <a class="navbar-brand"
                href="<?php bloginfo('url') ?>">
                 <?php
-                    echo file_get_contents('http://cdn.dreamhead.ch/assets/logo-v2.svg');
+                    echo file_get_contents('http://cdn.dreamhead.ch/assets/logo-v3.svg');
                 ?>
             </a>
         </div>
