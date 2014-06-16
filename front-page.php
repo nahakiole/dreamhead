@@ -19,16 +19,18 @@
         $count++;
         if ($count == 1 && $paged == 1) {
 
+            $color = get_post_meta(get_the_ID(), 'DREAMHEAD_color', true);
+            $subtitle = get_post_meta(get_the_ID(), 'DREAMHEAD_subtitle', true);
             $image = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
             $svgClass = substr($image,-3,3) == 'svg' ? 'svg' : '';
             ?>
 
             <!-- Main jumbotron for a primary marketing message or call to action -->
             <a href="<?php the_permalink() ?>">
-                <div class="jumbotron main-article <?php echo $svgClass ?>"
-                     style="background-image: url('<?php
-                     echo $image;
-                     ?>')">
+            <div class="jumbotron main-article <?php echo $svgClass ?>"
+                 style="background-image: url('<?php
+                 echo $image;
+                 ?>'); background-color: <?php echo $color?>">
 
                     <div class="article-pretext">
                         <div class="container">
@@ -37,9 +39,13 @@
 
                                 <?php the_title(); ?>
 
+
                             </h1>
 
-                            <p></p>
+                            <p>
+                                <?php echo $subtitle; ?>
+
+                            </p>
 
                         </div>
                     </div>

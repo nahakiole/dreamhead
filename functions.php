@@ -52,28 +52,7 @@ register_sidebar(
 remove_filter ('the_content', 'wpautop');
 add_theme_support( 'post-thumbnails' );
 
-add_action('add_meta_boxes', 'awesome_video_meta');
-function awesome_video_meta()
-{
-    add_meta_box('video_meta', 'Awesome Video', 'awesome_video_url_meta', 'post', 'advanced', 'high');
-}
 
-function awesome_video_url_meta($post)
-{
-    $awesome_video_url = get_post_meta($post->ID, '_awesome_video_url', true);
-    ?>
-    <textarea name="awesome_video_url" style="width: 100%; min-height: 100px; resize: vertical"/><?php echo esc_attr($awesome_video_url); ?></textarea>
-<?php
-}
-
-add_action('save_post', 'video_save_project_meta');
-function video_save_project_meta($post_ID)
-{
-    global $post;
-        if (isset($_POST)) {
-            update_post_meta($post_ID, '_awesome_video_url', strip_tags($_POST['awesome_video_url']));
-        }
-}
 
 
 function get_navigation() {
@@ -152,3 +131,74 @@ function cc_mime_types( $mimes ){
 add_filter( 'upload_mimes', 'cc_mime_types' );
 
 add_theme_support('post-formats', array('video', 'gallery', 'audio'));
+
+
+/**
+ * Registering meta boxes
+ *
+ * All the definitions of meta boxes are listed below with comments.
+ * Please read them CAREFULLY.
+ *
+ * You also should read the changelog to know what has been changed before updating.
+ *
+ * For more information, please visit:
+ * @link http://www.deluxeblogtips.com/meta-box/
+ */
+
+
+add_filter( 'rwmb_meta_boxes', 'DREAMHEAD_register_meta_boxes' );
+
+/**
+ * Register meta boxes
+ *
+ * @return void
+ */
+function DREAMHEAD_register_meta_boxes( $meta_boxes )
+{
+    /**
+     * Prefix of meta keys (optional)
+     * Use underscore (_) at the beginning to make keys hidden
+     * Alt.: You also can make prefix empty to disable it
+     */
+    // Better has an underscore as last sign
+    $prefix = 'DREAMHEAD_';
+
+    // 2nd meta box
+    $meta_boxes[] = array(
+        'title' => __( 'Awesome Fields', 'rwmb' ),
+
+        'fields' => array(
+            // TEXT
+            array(
+                // Field name - Will be used as label
+                'name'  => __( 'Subtitle', 'rwmb' ),
+                // Field ID, i.e. the meta key
+                'id'    => "{$prefix}subtitle",
+                // Field description (optional)
+                'type'  => 'text',
+                // Default value (optional)
+                'std'   => __( 'Default text value', 'rwmb' ),
+            ),
+            // COLOR
+            array(
+                'name' => __( 'Background Color', 'rwmb' ),
+                'id'   => "{$prefix}color",
+                'type' => 'color',
+            ),
+
+            // TEXT
+            // TEXTAREA
+            array(
+                'name' => __( 'Awesome Video', 'rwmb' ),
+                'id'   => "{$prefix}awesomevideo",
+                'type' => 'textarea',
+                'cols' => 20,
+                'rows' => 3,
+            )
+
+        )
+    );
+
+    return $meta_boxes;
+}
+

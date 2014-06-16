@@ -7,18 +7,25 @@
     $now = new DateTime(get_the_date('c'));
     $isLegacyPost = $date->diff($now)->invert;
     if (!$isLegacyPost) {
+
+        $color = get_post_meta(get_the_ID(), 'DREAMHEAD_color', true);
         $image = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+
+        $subtitle = get_post_meta(get_the_ID(), 'DREAMHEAD_subtitle', true);
         $svgClass = substr($image,-3,3) == 'svg' ? 'svg' : '';
         ?>
         <div class="jumbotron main-article <?php echo $svgClass ?>"
              style="background-image: url('<?php
              echo $image;
-             ?>')">
+             ?>'); background-color: <?php echo $color?>">
             <div class="article-pretext">
                 <div class="container">
 
                     <h1><?php the_title(); ?></h1>
-                   <p> </p>
+                   <p>
+                       <?php echo $subtitle; ?>
+
+                   </p>
 
                 </div>
             </div>
@@ -73,6 +80,7 @@
             <?php
             }
             else {
+
             ?>
             <div class="col-md-8 col-md-offset-2 top30 single-article">
                 <?php
