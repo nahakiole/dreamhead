@@ -75,7 +75,7 @@
                  class="img-responsive wp-post-image"/>
                 <?php } ?>
             <h1><?php the_title(); ?></h1>
-            <span class="autor-name"> Am <?php the_date('d.m.Y'); ?> von  <?php echo get_the_author(); ?></span><br/>rrr
+            <span class="autor-name"> Am <?php the_date('d.m.Y'); ?> von  <?php echo get_the_author(); ?></span><br/>
 
             <?php
             }
