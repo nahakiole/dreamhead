@@ -255,7 +255,11 @@ h2 {
 }
 
 
-.article-preview, .single-page, .single-article {
+.article-preview {
+    font-family: "proxima-nova",sans-serif;
+}
+
+.single-page, .single-article {
     font-spacing: 0.01rem;
     font-size: 22px;
     line-height: 1.5;
@@ -267,6 +271,22 @@ h2 {
 
 .article-preview a {
     font-size: inherit;
+}
+
+a.read-more {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    color: #000;
+    font-size: 18px;
+}
+
+.caption {
+    padding-bottom: 15px;
+}
+
+.caption p {
+    font-family: "proxima-nova",sans-serif;
 }
 
 .flex-video {

@@ -20,6 +20,7 @@
         if ($count == 1 && $paged == 1) {
 
             $color = get_post_meta(get_the_ID(), 'DREAMHEAD_color', true);
+            $color = empty($color) ? 'transparent' : $color;
             $subtitle = get_post_meta(get_the_ID(), 'DREAMHEAD_subtitle', true);
             $image = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
             $svgClass = substr($image,-3,3) == 'svg' ? 'svg' : '';
@@ -67,25 +68,24 @@
         ?>
         <div class="col-md-12 top60 article-preview">
             <div class="row">
-                <div class="col-lg-3 col-lg-offset-2 col-md-3 col-md-offset-1">
+                <div class="col-lg-3 col-lg-offset-1 col-md-5">
 
                     <?php
-                    echo get_the_post_thumbnail(null, 'medium', "class=img-responsive")
+                    echo get_the_post_thumbnail(null, 'large', "class=img-responsive")
                     ?>
 
                 </div>
-                <div class="caption col-lg-5 col-md-7">
+                <div class="caption col-lg-7 col-md-7">
                     <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
                     <span class="autor-name"> Am <?php the_date('d.m.Y'); ?> von  <?php echo get_the_author(); ?></span>
 
                     <p> <?php
-                        echo substr(strip_tags(get_the_excerpt()), 0, 180) . "..." ?></p> <a
-                        href="<?php the_permalink() ?>">Weiterlesen
-                    </a>
-
-
+                        echo substr(strip_tags(get_the_excerpt()), 0, 240) . "..." ?></p>
                 </div>
             </div>
+            <a class="read-more"
+                href="<?php the_permalink() ?>">Weiterlesen
+            </a>
 
         </div>
 
