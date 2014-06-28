@@ -8,12 +8,13 @@
             </div>
             <div class="col-md-6 text-right">
                 <ul class="list-inline">
-                    <li>
-                        <a href="http://www.robinio.ch">robinio.ch</a>
-                    </li>
+
                     <li>
                         <a href="http://www.manuelmeister.ch">manuelmeister.ch
                         </a>
+                    </li>
+                    <li>
+                        <a href="http://www.robinio.ch">robinio.ch</a>
                     </li>
                 </ul>
 
